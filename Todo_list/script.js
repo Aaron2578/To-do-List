@@ -4,11 +4,9 @@ var ul = document.getElementById('list_container');
 function update() {
     var listItem = document.createElement('li');
     listItem.innerHTML=input.value + '<button onclick="remove(event)">Delete</button>';
-    
-    ul.append(listItem)
+    ul.append(listItem);
+    input.value="";
 }
-
 function remove(event) {
-    event.target.parentElement.remove();
-    
+    event.target.parentElement.remove();    
 }
